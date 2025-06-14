@@ -9,6 +9,9 @@ header {
   color: white;
   padding: 1rem;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 header nav a {
   color: white;
@@ -24,37 +27,42 @@ header nav a:hover {
   padding: 3rem 1rem;
   background: #ffccbc;
 }
-.services li {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #fff3e0;
-  border-radius: 5px;
-  list-style: none;
-}
-.contact-box {
-  padding: 1rem;
-  background-color: #e8eaf6;
-}
-.contact-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.contact-box input, .contact-box textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.contact-box button {
-  background: #673ab7;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
 footer {
   background-color: #512da8;
   color: white;
   text-align: center;
   padding: 1rem;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  background: #673ab7;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+}
+.whatsapp {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  padding: 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 22px;
 }
